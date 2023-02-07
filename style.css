@@ -1,0 +1,80 @@
+body {
+    height: 100%;
+    color: whitesmoke;
+    background-color: whitesmoke;
+    font-family: Trebuchet MS, sans-serif;
+}
+body::before {
+    content: "";
+    position: fixed;
+    background-image: linear-gradient(rgba(25, 25, 25, 0.4), rgba(25, 25, 25, 0.35)), url(img/plataforms.png);
+    background-position: center;
+    background-size: cover;
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: -10px;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    z-index: -1;
+}
+form {
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 25px auto;
+    padding: 2px;
+    border: 2px groove #aab7c0;
+    border-radius: 15px;
+    background-color: rgba(34, 41, 47, 0.8);
+    z-index: 2;
+}
+h1, #description {
+    text-align: center;
+    font-family: Impact, Haettenschweile, sans-serif;
+}
+label, .top, .button {
+    display: block;
+}
+#name-label, #email-label, #number-label {
+    margin: 1em 0;
+}
+label[for="checkbox"] {
+    margin: 2px 0;
+}
+.top, textarea {
+    width: 100%;
+    min-height: 2em;
+    border-radius: 5px;
+}
+.box {
+    height: 8em;
+}
+div {
+    padding: 0 1em 1em 1em;
+}
+button {
+    margin: 1em auto 0 auto;
+    padding: 5px;
+    font-size: 15px;
+    width: 25%;
+    border-color: #fbfc7d;
+    background-color: #fd6130;
+    color: whitesmoke;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px #999;font-family: Impact, 'Arial Narrow Bold', sans-serif;
+}
+button:hover {
+    background-color: #b9421d;
+    border-color: #fd6130;
+}
+button:active {
+    box-shadow: 0 2px #333;
+    transform: translateY(4px);}
+hr {
+    background-color: #aab7c0;
+    border: none;
+    height: 1px;
+}

@@ -1,0 +1,56 @@
+<DOCTYPE! html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>GamiNews Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div>
+        <form id="survey-form">
+          <h1 id="title">Gamin' News</h1>
+        <p id="description">Register below to get the latest news for your favorite gaming plataforms</p>
+      <div class="first-section">
+        <label id="name-label">Name
+            <input class="top" id="name" type="text" placeholder="Type your name" required>
+          </label>
+          <label id="email-label">Email
+            <input class="top" id="email" type="email" placeholder="Type your email" required>
+          </label>
+          <label id="number-label">Age
+            <input class="top" id="number" type="number" placeholder="Select your age" min="10" max="80">
+          </label>
+      </div>
+      <hr>
+        <div>
+          <p>How often do you want to receive the news?</p>
+          <select id="dropdown">
+            <option>Daily</option>
+            <option>Weekly</option>
+            <option>Monthly</option>
+          </select>
+        </div>
+        <hr>
+        <div class="second-section">
+          <p>What plataforms are you interested in?</p>
+            <label for="checkbox"><input type="checkbox" value="text1" name="plataform" /> Microsoft Xbox One/Series X & S</label>
+            <label for="checkbox"><input type="checkbox" value="text2" name="plataform" /> Mobile</label>
+            <label for="checkbox"><input type="checkbox" value="text3" name="plataform" /> PC/Steam</label>
+            <label for="checkbox"><input type="checkbox" value="text4" name="plataform" /> Retro</label>
+            <label for="checkbox"><input type="checkbox" value="text5" name="plataform" /> Sony Playstation 4/5</label>
+        </div>
+        <hr>
+        <div>
+            <p>Do you plan on upgrading your gaming system?</p>
+            <label for="radio"><input type="radio" value="text1" name="update" /> Yes</label>
+            <label for="radio"><input type="radio" value="text2" name="update" /> No</label>
+        </div>
+          <hr>
+            <div>
+            <p>Any inputs or suggestions?</p>
+            <textarea class="box" placeholder="Type anything that comes to mind..."></textarea>
+            <button class="button" type="submit" id="submit">SUBMIT</button>
+        </div>
+        </form>
+  </body>
+</html>
