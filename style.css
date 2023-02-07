@@ -30,7 +30,12 @@ form {
     background-color: rgba(34, 41, 47, 0.8);
     z-index: 2;
 }
-h1, #description {
+img {
+    display: block;
+    width: 20vw;
+    margin: 0 auto;
+}
+#description {
     text-align: center;
     font-family: Impact, Haettenschweile, sans-serif;
 }
