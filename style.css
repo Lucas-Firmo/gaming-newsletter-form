@@ -35,15 +35,83 @@ img {
     width: 20vw;
     margin: 0 auto;
 }
-#description {
+.subtitle {
     text-align: center;
-    font-family: Impact, Haettenschweile, sans-serif;
+    font-family: sans-serif;
 }
-label, .top, .button {
+.cb, .top, .button {
     display: block;
+}
+.top::selection, .box::selection {
+    color: white;
+    background: #19df64;
+}
+#dropdown {
+    width: 7em;
+    height: 1.5em;
+    border: 1px solid lightgray;
+    font-size: 1em;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    outline: none;
+}
+.cb {
+    position: relative;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    padding-left: 1.5em;
+    margin: 5px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.cb input {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+.greencheck {
+    background-color: grey;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1em;
+    width: 1em;
+}
+.cb:hover input ~ .greencheck {
+    background-color: #ccc;
+}
+.cb input:checked ~ .greencheck {
+    background-color: #19df64;
+  }
+.greencheck::after {
+    content: "";
+    display: none;
+    position: absolute;
+}
+.cb input:checked ~ .greencheck:after {
+    display: block;
+    top: 0;
+    left: 4px;
+}
+.cb .greencheck::after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 #name-label, #email-label, #number-label {
     margin: 1em 0;
+    height: 1em;
 }
 label[for="checkbox"] {
     margin: 2px 0;
@@ -62,8 +130,9 @@ div {
 button {
     margin: 1em auto 0 auto;
     padding: 5px;
-    font-size: 15px;
+    font-size: 1.5em;
     width: 25%;
+    height: 2em;
     border-color: #fbfc7d;
     background-color: #fd6130;
     color: whitesmoke;
