@@ -50,8 +50,19 @@
             <div>
             <p>Any inputs or suggestions?</p>
             <textarea class="box" placeholder="Type anything that comes to mind..."></textarea>
-            <button class="button" type="submit" id="submit">SUBMIT</button>
+            <button class="button" type="submit" id="submit" onclick="validationForm()">SUBMIT</button>
         </div>
         </form>
+        <script>
+          function validationForm() {
+            const name = document.forms[0]["name"].value;
+            const email = document.forms[0]["email"].value;
+
+            if (name == "" || email == "") {
+              alert("Please fill the required information.");
+              return false;
+            }
+          }
+        </script>
   </body>
 </html>
